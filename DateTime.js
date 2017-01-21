@@ -311,6 +311,7 @@ var Datetime = React.createClass({
 				inputValue: date.format( this.state.inputFormat ),
 				open: !(this.props.closeOnSelect && close )
 			});
+         this.props.onBlur(date);
 		} else {
 			if (this.props.closeOnSelect && close) {
 				this.closeCalendar();
